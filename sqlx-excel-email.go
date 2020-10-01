@@ -18,6 +18,7 @@ import (
 	"time"
 
 	"github.com/jordan-wright/email"
+	excel "github.com/githomework/apps-util-excel"
 
 )
 
@@ -81,7 +82,12 @@ func do() {
 		for j, vv := range v {
 			col, _ := excelize.ColumnNumberToName(j + 1)
 			//log.Printf("type %T, %v", vv, vv)
+			if col == "E" {
+				t := excel.TimeToUTC(vv.(time.Time))
+				xlsx.SetCellValue(sheet, col+strconv.Itoa(begin+i), t)
+				continue
 
+			}
 			xlsx.SetCellValue(sheet, col+strconv.Itoa(begin+i), vv)
 
 		}
