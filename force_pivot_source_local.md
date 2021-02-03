@@ -1,0 +1,5 @@
+- rename template to template.xlsx.zip
+- go to template.xlsx.zip\xl\pivotCache\_rels
+- replace all files with content in file pivotCacheDefinition1.xml.rels
+- this will force pivot table data sources to remain inside the new workbook.
+- rename template back to original name.
