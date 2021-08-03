@@ -43,4 +43,4 @@ finally:
     f.close()    
     os._exit(0)    
 #### Quitting of Excel seems unreliable. May need to kill excel.exe outside of this script.
-#### Should make make sure Excel is not already running, before running script.
+#### Should make sure Excel is not already running, before running script.
